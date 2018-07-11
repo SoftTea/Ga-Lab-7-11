@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <h1>Edit Fridge Page</h1>
+
+  <form method="POST" action="/fridge/<%=id%>?_method=PUT">
+    Name: <input type="text" name="name" value="<%=item.name%>"/>
+    Type: <input type="text" name="type" value="<%=item.type%>"/>
+    Image: <input type="text" name="img" value="<%=item.img%>"/>
+    Is It Edible:
+    <input type="checkbox" name="edible"
+
+    <% if(item.edible === true){ %>
+        checked
+    <% } %>
+    />
+    <br/>
+    <input type="submit" value="Submit Changes"/>
+  </form>
+
+</body>
+</html>
