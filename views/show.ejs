@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <h1>Jessamyns Fridge Show Page</h1>
 
-    <h3>Items Name: <%= item.name %></h3>
-    <h4>Items Type: <%= item.type %></h4>
-    <h4>Items Edible: <%= item.edible %></h4>
-    <h4>Items Img: <%= item.img %></h4>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
-    <% if(Items).edible === true) {%>
-      <span>Lets eat it!</span>
+<body>
+
+  <h1>Jessamyn's Fridge Show Page</h1>
+
+  <h3>Items Name:
+    <%= item.name %>
+  </h3>
+  <h4>Items Type:
+    <%= item.type %>
+  </h4>
+  <h4>Items Img:
+    <img src='<%=item.img%>' style='height: 150px'>
+  </h4>
+
+  <% if(item.edible === true) {%>
+    <span>Let's eat it!</span>
     <%} else {%>
-      <span>lets not eat it</span>
-    <% } %>
-  </body>
+      <span>Let's not eat it</span>
+      <% } %>
+
+        <h3>
+          <a href="/fridge">Go home guvanaa</a>
+        </h3>
+</body>
+
 </html>

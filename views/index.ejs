@@ -11,11 +11,11 @@
       <li> <a href="/fridge/<%=i%>"><%=items[i].name%></a></li>
       <li> <a href="/fridge/<%=i%>"><%=items[i].type%></a></li>
       <li><% if(items[i].edible === true){ %>
-        It is ready to edible
+        It is edible
       <% } else { %>
-        It is not ready to edible
+        It is not edible
       <% } %></li>
-      <li> <a href="/fridge/<%=i%>"><%=items[i].img%></a></li>
+       <img src='<%=items[i].img%>' style= "height: 200px"> 
      <% } %>
   </ul>
  </body>
