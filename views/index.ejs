@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <title>Jessamyn's Fridge</title>
+ </head>
+ <body>
+<h1>Items</h1>
+<ul>
+      <% for(let i = 0; i< items.length ; i ++) { %>
+      <li> <a href="/fridge/<%=i%>"><%=items[i].name%></a></li>
+      <li> <a href="/fridge/<%=i%>"><%=items[i].type%></a></li>
+      <li><% if(items[i].edible === true){ %>
+        It is ready to edible
+      <% } else { %>
+        It is not ready to edible
+      <% } %></li>
+      <li> <a href="/fridge/<%=i%>"><%=items[i].img%></a></li>
+     <% } %>
+  </ul>
+ </body>
+</html>
