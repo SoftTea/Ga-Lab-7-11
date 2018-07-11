@@ -1,0 +1,17 @@
+body {
+  background-color: burlywood;
+  text-align: center;
+}
+
+img{
+  border-radius: 50%;
+  
+}
+.contain {
+  border: 2px red solid;
+  border-radius: 50%;
+}
+
+li {
+  list-style-type: none;
+}

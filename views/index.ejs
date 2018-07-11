@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
- <head>
-   <meta charset="utf-8">
-   <title>Jessamyn's Fridge</title>
- </head>
- <body>
-<h1>Items</h1>
-<a href="/fridge/add"> Add new item</a>
-<ul>
-      <% for(let i = 0; i< items.length ; i ++) { %>
-      <li> <a href="/fridge/<%=i%>"><%=items[i].name%></a></li>
-      <li> <a href="/fridge/<%=i%>"><%=items[i].type%></a></li>
-      <li><% if(items[i].edible === true){ %>
-        It is edible
-      <% } else { %>
-        It is not edible
-      <% } %></li>
-       <img src='<%=items[i].img%>' style= "height: 200px"> 
-       <form method="POST" action="/fridge/<%=i%>?_method=DELETE">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jessamyn's Fridge</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <h1>Items</h1>
+  <a href="/fridge/add"> Add new item</a>
+  <ul>
+    <% for(let i = 0; i< items.length ; i ++) { %>
+      <div class="contain"> 
+      <li>
+        <a href="/fridge/<%=i%>">
+          <%=items[i].name%>
+        </a>
+      </li>
+      <li>
+        <a href="/fridge/<%=i%>">
+          <%=items[i].type%>
+        </a>
+      </li>
+      <li>
+        <% if(items[i].edible === true){ %>
+          It is edible
+          <% } else { %>
+            It is not edible
+            <% } %>
+      </li>
+      <img src='<%=items[i].img%>' style="height: 200px">
+      <form method="POST" action="/fridge/<%=i%>?_method=DELETE">
         <input type="submit" value="DELETE">
-        </form>
-        <a href="/fridge/<%=i%>/edit" >Edit</a>
-     <% } %>
+      </form>
+      <a href="/fridge/<%=i%>/edit">Edit</a>
+      </div>
+      <% } %>
   </ul>
- </body>
+</body>
+
 </html>
